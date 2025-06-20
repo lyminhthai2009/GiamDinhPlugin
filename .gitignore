@@ -34,8 +34,6 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
-# Khong bo qua maven-wrapper.jar de nguoi khac co the build du an
-# .mvn/wrapper/maven-wrapper.jar
 
 # IntelliJ IDEA
 .idea/
@@ -47,17 +45,5 @@ buildNumber.properties
 .project
 .settings/
 
-# NetBeans
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-.nb-gradle/
-
 # VS Code
 .vscode/
-
-# Scripts (tuy chon, neu ban khong muon dua script len GitHub)
-# check_project.sh
-# package_and_move.sh
-# push_to_github.sh
