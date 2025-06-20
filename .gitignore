@@ -10,7 +10,10 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# Package Files #
+# Package Files
+# Bo qua tat ca cac file .jar, TRU NHUNG FILE ben trong thu muc /libs/
+!libs/
+!libs/*.jar
 *.jar
 *.war
 *.ear
@@ -31,12 +34,30 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
-.mvn/wrapper/maven-wrapper.jar
+# Khong bo qua maven-wrapper.jar de nguoi khac co the build du an
+# .mvn/wrapper/maven-wrapper.jar
 
-# IDEA
+# IntelliJ IDEA
 .idea/
 *.iml
 *.iws
 
-# Bỏ comment dòng dưới nếu bạn không muốn push thư mục libs
-# libs/
+# Eclipse
+.classpath
+.project
+.settings/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+.nb-gradle/
+
+# VS Code
+.vscode/
+
+# Scripts (tuy chon, neu ban khong muon dua script len GitHub)
+# check_project.sh
+# package_and_move.sh
+# push_to_github.sh
