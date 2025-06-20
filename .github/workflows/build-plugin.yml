@@ -1,0 +1,59 @@
+# Ten cua workflow, se hien thi trong tab Actions
+name: Build GiamDinh Plugin
+
+# Dieu kien de kich hoat workflow nay
+on:
+  # Chay khi co ai do push code len nhanh 'main'
+  push:
+    branches: [ "main" ]
+  # Cho phep chay thu cong tu tab Actions
+  workflow_dispatch:
+
+# Cac cong viec (jobs) se duoc thuc hien
+jobs:
+  # Dinh nghia mot cong viec co ten la 'build'
+  build:
+    # Chay tren mot may ao Ubuntu moi nhat do GitHub cung cap
+    runs-on: ubuntu-latest
+
+    # Cac buoc (steps) cua cong viec 'build'
+    steps:
+      # Buoc 1: Checkout code tu repository cua ban ve may ao
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Buoc 2: Thiet lap moi truong Java (JDK 17)
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          # Cache cac goi Maven de build nhanh hon o nhung lan sau
+          cache: maven
+
+      # Buoc 3: Cai dat cac file dependencies (API .jar) vao kho Maven local cua may ao
+      # Day la buoc quan trong nhat de mo phong lai cac lenh 'mvn install:install-file' ban da lam
+      - name: Install Local Dependencies
+        run: |
+          mvn install:install-file -Dfile=libs/paper.jar -DgroupId=io.papermc.paper -DartifactId=paper-api -Dversion=1.21-R0.1-SNAPSHOT -Dpackaging=jar
+          mvn install:install-file -Dfile=libs/vault.jar -DgroupId=net.milkbowl.vault -DartifactId=VaultAPI -Dversion=1.7.3-b131 -Dpackaging=jar
+          mvn install:install-file -Dfile=libs/placeholderapi.jar -DgroupId=me.clip -DartifactId=PlaceholderAPI -Dversion=2.11.6 -Dpackaging=jar
+          mvn install:install-file -Dfile=libs/mmoitems.jar -DgroupId=net.Indyuce -DartifactId=MMOItems -Dversion=6.10 -Dpackaging=jar
+          mvn install:install-file -Dfile=libs/mythiclib.jar -DgroupId=io.lumine -DartifactId=MythicLib -Dversion=1.7 -Dpackaging=jar
+          mvn install:install-file -Dfile=libs/playerpoints.jar -DgroupId=org.black_ixx -DartifactId=PlayerPoints -Dversion=3.3.2 -Dpackaging=jar
+          mvn install:install-file -Dfile=libs/coinengine.jar -DgroupId=com.github.sup2is -DartifactId=CoinEngine -Dversion=2.4.2 -Dpackaging=jar
+          mvn install:install-file -Dfile=libs/citizens.jar -DgroupId=net.citizensnpcs -DartifactId=citizens-main -Dversion=2.0.33-SNAPSHOT -Dpackaging=jar
+          mvn install:install-file -Dfile=libs/itemsadder.jar -DgroupId=dev.lone -DartifactId=ItemsAdder -Dversion=4.0.2-beta-release-11 -Dpackaging=jar
+
+      # Buoc 4: Bien dich du an voi Maven
+      - name: Build with Maven
+        run: mvn clean package
+
+      # Buoc 5: Tai len file .jar da bien dich (artifact)
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          # Ten cua artifact se hien thi tren GitHub
+          name: GiamDinh-Plugin
+          # Duong dan den file can tai len
+          path: target/GiamDinh-1.0.0.jar
