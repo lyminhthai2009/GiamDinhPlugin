@@ -1,0 +1,14 @@
+# Hiện tại chưa có Tool nào, bạn có thể thêm sau
+# Ví dụ:
+#
+# basic_loupe:
+#   item:
+#     type: VANILLA
+#     id: SPYGLASS
+#     name: "&fKính Lúp Cơ Bản"
+#     lore:
+#       - "&7Dùng để tự giám định."
+#       - ""
+#       - "&8ID: basic_loupe"
+#   modifiers:
+#     rare_find_chance: 1.01 # 1% bonus

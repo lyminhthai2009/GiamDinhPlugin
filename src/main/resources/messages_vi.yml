@@ -1,0 +1,42 @@
+prefix: "&8[&6GiamDinh&8] &r"
+no_permission: "&cBạn không có quyền để thực hiện lệnh này."
+player_only: "&cLệnh này chỉ dành cho người chơi."
+player_not_found: "&cKhông tìm thấy người chơi &e{player}&c."
+invalid_number: "&cSố &e{number} &ckhông hợp lệ."
+reload_success: "&aĐã tải lại cấu hình thành công!"
+not_enough_money: "&cBạn không đủ &e{currency_name}&c. Cần &6{amount}&c, bạn có &6{balance}&c."
+inventory_full: "&cTúi đồ của bạn đã đầy."
+
+# Lệnh /gda
+gda_help_header: "&6--- Lệnh Admin GiamDinh ---"
+gda_help_reload: "&e/gda reload &7- Tải lại cấu hình."
+gda_help_setlevel: "&e/gda setlevel <tên> <cấp> &7- Đặt cấp độ cho người chơi."
+gda_help_give: "&e/gda give <tên> <booster/tool> <id> [số lượng] &7- Tặng vật phẩm."
+setlevel_success: "&aĐã đặt cấp độ của &e{player} &athành &6{level}&a."
+setlevel_fail_max: "&cKhông thể đặt cấp độ cao hơn cấp tối đa ({max_level})."
+give_success: "&aĐã tặng &e{amount}x &f{item_name} &acho &e{player}&a."
+give_fail_type: "&cLoại vật phẩm không hợp lệ. Dùng 'booster' hoặc 'tool'."
+give_fail_not_found: "&cKhông tìm thấy vật phẩm loại '{type}' với ID '{id}'."
+list_ids: "&aCác ID có sẵn cho '{type}': &f{ids}"
+
+# Giám định
+appraisal_success: "&aGiám định thành công! Bạn nhận được &e{item_count} &avật phẩm mới."
+appraisal_fail: "&cGiám định thất bại! Vật phẩm đã bị phá hủy."
+appraisal_fail_returned: "&cGiám định thất bại! Vật phẩm đã được trả lại."
+appraisal_fee_charged: "&7Đã trừ &e{amount} {currency_name} &7phí giám định."
+not_appraisable: "&cVật phẩm này không thể giám định được."
+must_hold_tool: "&cBạn phải cầm trên tay công cụ giám định hợp lệ để tự giám định."
+tool_not_found: "&cCông cụ giám định này không hợp lệ."
+item_required_in_gui: "&cHãy đặt vật phẩm cần giám định vào ô."
+batch_size_exceeded: "&cBạn chỉ có thể giám định tối đa &e{max} &cvật phẩm cùng lúc."
+booster_applied: "&aĐã áp dụng bùa &f{booster_name}&a."
+booster_removed: "&cĐã gỡ bỏ bùa &f{booster_name}&c."
+
+# Cấp độ
+level_up: "&b&lCHÚC MỪNG! &fBạn đã đạt &6&lCấp {level}! &fNhận được các lợi ích mới!"
+xp_gain: "&a&l+ {xp} XP &7({current_xp}/{required_xp})"
+
+# Cửa hàng
+shop_purchase_success: "&aBạn đã mua thành công &f{item_name}&a với giá &e{price} {currency_name}&a."
+shop_level_required: "&cBạn cần đạt cấp &6{level} &cđể mua vật phẩm này."
+shop_permission_required: "&cBạn không có quyền để mua vật phẩm này."

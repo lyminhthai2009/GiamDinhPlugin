@@ -1,0 +1,46 @@
+buy_xp_booster:
+  display_item:
+    type: VANILLA
+    id: EXPERIENCE_BOTTLE
+    name: "&bMua: Bùa Tăng 50% XP"
+    lore:
+      - "&7Giá: &e{price} {currency_name}"
+      - "&7Tăng 50% XP cho lần giám định tiếp theo."
+      - ""
+      - "&a&lCLICK ĐỂ MUA"
+    custom_model_data: 1001
+  give_item_id: "xp_boost_1"
+  give_item_type: "BOOSTER"
+  price: 5000
+  slot: 10
+  requirements:
+    level: 5
+    permission: "giamdinh.shop.buy.xp_booster"
+
+buy_rare_booster:
+  display_item:
+    type: VANILLA
+    id: GOLD_NUGGET
+    name: "&6Mua: Bùa May Mắn"
+    lore:
+      - "&7Giá: &e{price} {currency_name}"
+      - "&7Tăng 10% cơ hội tìm đồ hiếm."
+      - ""
+      - "&a&lCLICK ĐỂ MUA"
+    custom_model_data: 1002
+  give_item_id: "rare_find_1"
+  give_item_type: "BOOSTER"
+  price: 10000
+  slot: 12
+  requirements:
+    level: 10
+    permission: "" # Không cần quyền
+
+# Vật phẩm trang trí
+filler_glass:
+  display_item:
+    type: VANILLA
+    id: BLACK_STAINED_GLASS_PANE
+    name: " "
+  slots: [0,1,2,3,4,5,6,7,8, 9,17, 18,26, 27,35, 36,44, 45,46,47,48,49,50,51,52,53]
+  # Không có give_item_id, đây là vật phẩm trang trí

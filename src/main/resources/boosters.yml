@@ -1,0 +1,32 @@
+xp_boost_1:
+  item:
+    type: VANILLA
+    id: EXPERIENCE_BOTTLE
+    name: "&bBùa Tăng 50% XP (1 lần)"
+    lore:
+      - "&7Sử dụng trong GUI giám định"
+      - "&7để tăng 50% XP nhận được."
+      - ""
+      - "&8ID: xp_boost_1"
+    custom_model_data: 1001
+  type: SINGLE_USE
+  effect:
+    modifier: XP_BOOST
+    value: 1.5
+
+rare_find_1:
+  item:
+    type: VANILLA
+    id: GOLD_NUGGET
+    name: "&6Bùa May Mắn (1 lần)"
+    lore:
+      - "&7Sử dụng trong GUI giám định"
+      - "&7để tăng 10% cơ hội tìm thấy"
+      - "&7vật phẩm hiếm."
+      - ""
+      - "&8ID: rare_find_1"
+    custom_model_data: 1002
+  type: SINGLE_USE
+  effect:
+    modifier: RARE_FIND_CHANCE
+    value: 1.1

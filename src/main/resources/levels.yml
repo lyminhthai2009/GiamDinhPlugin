@@ -1,0 +1,56 @@
+# Định nghĩa các cấp độ và phần thưởng.
+# Plugin sẽ tìm cấp độ cao nhất mà người chơi đạt được.
+# Ví dụ: người chơi cấp 6 sẽ nhận perk của cấp 5.
+1:
+  perks:
+    max_batch_size: 1
+    permissions: []
+    modifiers:
+      rare_find_chance: 1.0
+      fee_reduction: 1.0
+      xp_boost: 1.0
+5:
+  perks:
+    max_batch_size: 4
+    permissions:
+      - "giamdinh.perk.slot2"
+    modifiers:
+      rare_find_chance: 1.02
+      fee_reduction: 0.98
+      xp_boost: 1.05
+10:
+  perks:
+    max_batch_size: 9
+    permissions:
+      - "giamdinh.rank.apprentice"
+    modifiers:
+      rare_find_chance: 1.05
+      fee_reduction: 0.95
+      xp_boost: 1.10
+25:
+  perks:
+    max_batch_size: 16
+    permissions:
+      - "giamdinh.rank.journeyman"
+    modifiers:
+      rare_find_chance: 1.10
+      fee_reduction: 0.90
+      xp_boost: 1.20
+50:
+  perks:
+    max_batch_size: 32
+    permissions:
+      - "giamdinh.rank.expert"
+    modifiers:
+      rare_find_chance: 1.20
+      fee_reduction: 0.80
+      xp_boost: 1.35
+100:
+  perks:
+    max_batch_size: 64
+    permissions:
+      - "giamdinh.rank.master"
+    modifiers:
+      rare_find_chance: 1.50
+      fee_reduction: 0.50
+      xp_boost: 2.0

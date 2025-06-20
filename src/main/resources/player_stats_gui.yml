@@ -1,0 +1,45 @@
+title: "&8[ &bThông Tin Cá Nhân &8]"
+size: 45
+items:
+  player_head:
+    slot: 4
+    item:
+      type: PLAYER_HEAD
+      name: "&a&l{player_name}"
+      lore:
+        - "&7Thông tin giám định của bạn."
+  level_info:
+    slot: 20
+    item:
+      type: VANILLA
+      id: EXPERIENCE_BOTTLE
+      name: "&bCấp Độ Hiện Tại"
+      lore:
+        - "&7Cấp của bạn: &e%giamdinh_level%"
+        - "&7Cấp tối đa: &e%giamdinh_max_level%"
+  xp_info:
+    slot: 22
+    item:
+      type: VANILLA
+      id: BOOK
+      name: "&aKinh Nghiệm"
+      lore:
+        - "%giamdinh_xp_bar%"
+        - "&7XP: &a%giamdinh_xp_formatted%&7/&c%giamdinh_xp_required_formatted%"
+  perks_info:
+    slot: 24
+    item:
+      type: VANILLA
+      id: NETHER_STAR
+      name: "&6Lợi Ích Hiện Tại"
+      lore:
+        - "&7Giám định đồng loạt: &e%giamdinh_perk_batch_size% vật phẩm"
+        - "&7Bonus Tỷ lệ hiếm: &e+%giamdinh_perk_rare_find_bonus%%"
+        - "&7Giảm giá phí: &e%giamdinh_perk_fee_reduction_bonus%%"
+        - "&7Bonus XP: &e+%giamdinh_perk_xp_boost_bonus%%"
+  filler_glass:
+    slots: [0,1,2,3,5,6,7,8, 9,17, 18,19,21,23,25,26, 27,35, 36,37,38,39,40,41,42,43,44]
+    item:
+      type: VANILLA
+      id: GRAY_STAINED_GLASS_PANE
+      name: " "

@@ -1,0 +1,91 @@
+# Định nghĩa các vật phẩm có thể giám định và kết quả.
+# ID ở đầu (COAL_ORE, MI_CRYSTAL) là ID nội bộ của plugin để nhận diện.
+# Nó sẽ khớp với Material của VANILLA, hoặc type;id của MMOITEMS, hoặc namespace:id của ItemsAdder.
+COAL_ORE:
+  input:
+    type: VANILLA
+    id: COAL_ORE
+  rewards:
+    - chance: 80.0
+      items:
+        - type: VANILLA
+          id: COAL
+          amount: [2, 4]
+          name: "&8Than Sạch"
+          lore:
+            - "&7Sản phẩm từ quá trình tinh chế."
+    - chance: 15.0
+      items:
+        - type: VANILLA
+          id: CHARCOAL
+          amount: [1, 3]
+          name: "&7Than Củi"
+    - chance: 5.0
+      items:
+        - type: MMOITEMS
+          id: CONSUMABLE;CARBON_DUST
+          amount: 1
+  xp_modifier: 0.8
+  fee_modifier: 0.5
+
+DEEPSLATE_DIAMOND_ORE:
+  input:
+    type: VANILLA
+    id: DEEPSLATE_DIAMOND_ORE
+  rewards:
+    - chance: 60.0
+      items:
+        - type: VANILLA
+          id: DIAMOND
+          amount: [1, 2]
+          name: "&bKim Cương Thô"
+    - chance: 30.0
+      items:
+        - type: VANILLA
+          id: EMERALD
+          amount: [1, 1]
+    - chance: 9.9
+      items:
+        - type: MMOITEMS
+          id: GEM_STONE;SPARKLING_DIAMOND
+          amount: 1
+    - chance: 0.1
+      items:
+        - type: COMMAND
+          commands:
+            - "broadcast &e{player} &fvừa giám định ra một phần thưởng cực hiếm!"
+        - type: ITEMSADDER
+          id: my_namespace:ruby_gem # Ví dụ
+          amount: 1
+  xp_modifier: 2.5
+  fee_modifier: 3.0
+
+# Ví dụ cho MMOItems
+# Để vật phẩm MATERIAL có ID là ANCIENT_CRYSTAL có thể giám định
+MATERIAL;ANCIENT_CRYSTAL:
+  input:
+    type: MMOITEMS
+    id: MATERIAL;ANCIENT_CRYSTAL
+  rewards:
+    - chance: 100.0
+      items:
+        - type: MMOITEMS
+          id: MATERIAL;ETHEREAL_ESSENCE
+          amount: 2
+  xp_modifier: 5.0
+  fee_modifier: 10.0
+
+# Ví dụ cho ItemsAdder
+# Để vật phẩm có ID là my_namespace:unidentified_relic có thể giám định
+my_namespace:unidentified_relic:
+  input:
+    type: ITEMSADDER
+    id: my_namespace:unidentified_relic
+  rewards:
+    - chance: 100.0
+      items:
+        - type: ITEMSADDER
+          id: my_namespace:ancient_sword
+          amount: 1
+  xp_modifier: 10.0
+  fee_modifier: 15.0

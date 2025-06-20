@@ -1,0 +1,37 @@
+name: GiamDinh
+version: '${project.version}'
+main: com.yogurt.giamdinh.GiamDinh
+api-version: '1.21'
+author: yogurt
+description: Plugin giam dinh vat pham da chuc nang.
+softdepend: [Vault, PlaceholderAPI, MMOItems, PlayerPoints, CoinEngine, ItemsAdder, Citizens]
+permissions:
+  giamdinh.admin:
+    description: Quyen admin cao nhat.
+    default: op
+    children:
+      giamdinh.admin.reload: true
+      giamdinh.admin.setlevel: true
+      giamdinh.admin.givebooster: true
+      giamdinh.admin.give: true
+  giamdinh.admin.reload:
+    description: Cho phep su dung /gda reload.
+    default: op
+  giamdinh.admin.setlevel:
+    description: Cho phep su dung /gda setlevel.
+    default: op
+  giamdinh.admin.givebooster:
+    description: Cho phep su dung /gda givebooster.
+    default: op
+  giamdinh.admin.give:
+    description: Cho phep su dung /gda give.
+    default: op
+  giamdinh.use:
+    description: Cho phep mo GUI giam dinh.
+    default: true
+  giamdinh.shop:
+    description: Cho phep su dung cua hang.
+    default: true
+  giamdinh.stats:
+    description: Cho phep xem chi so ca nhan.
+    default: true

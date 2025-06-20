@@ -1,0 +1,47 @@
+# Cài đặt chung của plugin GiamDinh
+# Tác giả: yogurt
+
+# --- Cài đặt Lệnh Động ---
+# Định nghĩa lệnh chính và các tên gọi phụ.
+commands:
+  main: 'giamdinh'
+  aliases: ['dinhgia', 'dg']
+  player_stats: 'chiso'
+  admin: 'gda'
+  shop: 'gdshop'
+
+# --- Cài đặt Kinh Tế ---
+# Các lựa chọn: VAULT, PLAYER_POINTS, COIN_ENGINE
+currency:
+  type: 'VAULT'
+
+# --- Cài đặt Giám Định ---
+appraisal:
+  base_fee: 100.0
+  return_item_on_fail: true
+
+# --- Cài đặt GUI ---
+gui:
+  main_appraisal_title: "&8[ &6Giám Định Vật Phẩm &8]"
+  shop_title: "&8[ &aCửa Hàng Hỗ Trợ &8]"
+  player_stats_title: "&8[ &bThông Tin Cá Nhân &8]"
+  appraisal_gui_size: 54
+  shop_gui_size: 54
+  stats_gui_size: 45
+
+# --- Cài đặt Hệ thống Cấp độ ---
+leveling:
+  base_xp_gain: 10
+  # Công thức tính XP cần để lên cấp tiếp theo.
+  # {level} là cấp độ hiện tại.
+  xp_formula: "100 * ({level} * 1.25)"
+  max_level: 100
+
+# --- Tích hợp Citizens ---
+# Điền ID của NPC giám định vào đây.
+# Nếu để -1, tính năng này sẽ bị tắt.
+# Để lấy ID của NPC, dùng lệnh /npc list
+citizens_npc_id: -1
+
+# Bật/tắt các thông báo debug trong console.
+debug: false
